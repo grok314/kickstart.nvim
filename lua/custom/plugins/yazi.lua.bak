@@ -1,0 +1,21 @@
+return {
+  'mikavilpas/yazi.nvim',
+  event = 'VeryLazy',
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+    'nvim-tree/nvim-web-devicons', -- Optional: for file icons
+    lazy = true,
+  },
+  config = function()
+    require('yazi').setup()
+  end,
+  keys = {
+    {
+      '<leader>fy',
+      function()
+        require('yazi').yazi()
+      end,
+      desc = 'Open Yazi',
+    },
+  },
+}
